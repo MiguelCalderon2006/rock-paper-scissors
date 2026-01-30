@@ -40,14 +40,17 @@ h1 {
 
 .winner-display {
     display: flex;
-    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     margin-bottom: 3rem;
     border: 2px solid #BFDBF7;
     border-radius: 12px;
-    padding: 1.5rem;
-    font-size: 2rem;
     font-weight: 600;
-    justify-content: center;
+    font-size: 4rem;
+
 }
 
 .rps-item {
@@ -60,8 +63,7 @@ h1 {
     transition: transform 0.2s, background-color 0.2s, border-color 0.2s;
 }
 
-.rps-item:hover,
-.winner-display:hover {
+.rps-item:hover {
     transform: scale(1.05);
     background-color: #1F7A8C;
     border-color: #1F7A8C;
@@ -80,4 +82,41 @@ img {
 #player,
 #computer {
     display: none;
+
+}
+
+#player {
+    color: green
+}
+
+#computer {
+    color: red;
+}
+
+#tie {
+    color: #f0ad4e;
+}
+
+#matchup {
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+}
+
+.pop {
+    animation: pop 0.3s ease-out;
+}
+
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
