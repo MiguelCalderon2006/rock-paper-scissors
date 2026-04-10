@@ -53,24 +53,26 @@ document.querySelectorAll(".rps-item").forEach(item => {
 
         playerDisplay.style.display = "none";
         computerDisplay.style.display = "none";
+        playerDisplay.classList.remove("result-tie", "result-win", "result-lose");
+        computerDisplay.classList.remove("result-tie", "result-win", "result-lose");
 
         if (result === "tie") {
             playerDisplay.textContent = "Tie!";
-            playerDisplay.style.color = "orange";
+            playerDisplay.classList.add("result-tie");
             playerDisplay.style.display = "block";
             playerDisplay.classList.remove("pop");
             void playerDisplay.offsetWidth;
             playerDisplay.classList.add("pop");
         } else if (result === "player") {
             playerDisplay.textContent = "You win!";
-            playerDisplay.style.color = "green";
+            playerDisplay.classList.add("result-win");
             playerDisplay.style.display = "block";
             playerDisplay.classList.remove("pop");
             void playerDisplay.offsetWidth;
             playerDisplay.classList.add("pop");
         } else {
-            computerDisplay.textContent = "Computer wins!";
-            computerDisplay.style.color = "red";
+            computerDisplay.textContent = "You Lose!";
+            computerDisplay.classList.add("result-lose");
             computerDisplay.style.display = "block";
             computerDisplay.classList.remove("pop");
             void computerDisplay.offsetWidth;
