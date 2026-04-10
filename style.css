@@ -31,7 +31,6 @@ body {
     flex-direction: column;
     box-sizing: border-box;
     background-color: var(--bg-card);
-    max-width: 800px;
     width: 100%;
 }
 
