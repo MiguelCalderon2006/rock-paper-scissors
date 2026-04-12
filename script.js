@@ -1,6 +1,3 @@
-// ============================================
-// YOUR CODE HERE (arrays, functions, logic)
-// ============================================
 
 const choice = ["rock", "paper", "scissors"]
 
@@ -32,9 +29,6 @@ const getWinner = (player, computer) => {
 
 
 
-// ============================================
-// DOM WIRING (I handle this - connects your code to the UI)
-// ============================================
 const matchupDisplay = document.getElementById("matchup");
 const playerDisplay = document.getElementById("player");
 const computerDisplay = document.getElementById("computer");
